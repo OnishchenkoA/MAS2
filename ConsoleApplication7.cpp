@@ -46,6 +46,7 @@ public:
 			for (size_t i = 0; i < size; ++i) {
 				data[i] = other.data[i];
 			}
+			size = other.size + 1;
 		}
 		return *this;
 	}
