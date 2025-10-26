@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include <iostream>  
 
 class smart_array {
@@ -18,7 +18,7 @@ public:
 
 	void add_element(int value) {
 		if (size >= capacity) {
-			std::cout << "Îøèáêà: ïðåâûøåí ìàêñèìàëüíûé ðàçìåð ìàññèâà" << std::endl;
+			std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ°: Ð¿Ñ€ÐµÐ²Ñ‹ÑˆÐµÐ½ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°" << std::endl;
 			return;
 		}
 		data[size++] = value;
@@ -26,7 +26,7 @@ public:
 
 	int get_element(size_t index) const {
 		if (index >= size || index < 0) {
-			std::cout << "Îøèáêà: íåâåðíûé èíäåêñ" << std::endl;
+			std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ°: Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ" << std::endl;
 			return -1;
 		}
 		return data[index];
@@ -60,19 +60,19 @@ int main() {
 		arr.add_element(1);
 		arr.add_element(4);
 		arr.add_element(155);
-		std::cout << "Ïåðâûé ìàññèâ: " << std::endl;
+		std::cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << std::endl;
 		arr.print();
 		std::cout << std::endl;
 
 		smart_array new_array(2);
 		new_array.add_element(44);
 		new_array.add_element(34); 
-		std::cout << "Âòîðîé ìàññèâ: " << std::endl;
+		std::cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << std::endl;
 		arr.print();
 		std::cout << std::endl;
 
 		arr = new_array;
-		std::cout << "Ìàññèâ ïîñëå ïðèñâàèâàíèÿ: " << std::endl;
+		std::cout << "ÐœÐ°ÑÑÐ¸Ð² Ð¿Ð¾ÑÐ»Ðµ Ð¿Ñ€Ð¸ÑÐ²Ð°Ð¸Ð²Ð°Ð½Ð¸Ñ: " << std::endl;
 		arr.print();
 		std::cout << std::endl;
 	}
